@@ -145,8 +145,7 @@ repetitions and seed 20261108. Use `--output` to choose another destination.
 - Several scripts overwrite their default output files. Use a fresh output path
   where supported, as in the examples above, to preserve existing results.
 
-External data/probability locations can be configured with the environment variables
-in [the main README](../README.md). The scripts do not download datasets or weights.
+The scripts do not download datasets or weights.
 
 ## Paper-to-script mapping
 

@@ -82,19 +82,15 @@ for numerical comparison with the paper; re-exporting can introduce floating-poi
 differences. Export also replaces the tracked probability files at its output paths.
 See [output handling](outputs/README.md) before running new classifier experiments.
 
-## Alternative storage
+## Citation
 
-Default paths are relative to the repository. No path edits are needed for the
-documented layout. To store files elsewhere, set only the overrides you need:
+If you use this code in your research, please cite:
 
-```bash
-export HC_ROCP_DATASETS_DIR=/absolute/path/to/datasets
-export HC_ROCP_MODELS_DIR=/absolute/path/to/checkpoints
-export HC_ROCP_OUTPUTS_DIR=/absolute/path/to/experiment_outputs
+```bibtex
+@inproceedings{li2026hcrocp,
+  title     = {Certify, Report, or Refuse: Harm-Constrained Conformal Prediction for Clinical Actions},
+  author    = {Li, Zhiyuan and Yu, Lequan},
+  booktitle = {Machine Learning for Health (ML4H), Findings},
+  year      = {2026}
+}
 ```
-
-Keep the same subfolder names under each root. Overrides do not move files;
-copy the bundled dataset folders from `outputs/` when overriding its root.
-Relative override values, YAML paths, `--config`, and `--checkpoint` resolve from
-the repository root. Explicit relative input/output CLI paths resolve from the
-current working directory. Run the examples above from the repository root.
