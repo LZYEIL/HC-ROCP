@@ -1,0 +1,56 @@
+# Shared task definitions for HC-ROCP and baseline experiments.
+alpha: 0.05
+harm_delta: 0.01
+calibration_split_fraction: 0.3333333333333333
+calibration_split_seed: 20260815
+gamma_min_positive: 0.0001
+gamma_max: 1000000.0
+gamma_log_points: 41
+datasets:
+  isic2019:
+    output_dir: outputs/isic2019
+    calibration_split: calibration
+    test_split: official_test_known
+    num_labels: 8
+    actions: [routine_followup, dermatology_referral, biopsy_workup, urgent_specialist_pathway]
+    loss_matrix:
+      - [10, 4, 1, 0]
+      - [0, 1, 3, 6]
+      - [7, 2, 0, 4]
+      - [5, 1, 2, 4]
+      - [0, 1, 3, 6]
+      - [0, 1, 3, 6]
+      - [1, 1, 3, 6]
+      - [9, 3, 1, 0]
+    severe_labels: [0, 7]
+    harmful_actions: [0]
+    coverage_target: 0.95
+  covid19:
+    output_dir: outputs/covid19
+    calibration_split: calibration
+    test_split: test
+    num_labels: 4
+    actions: [no_action, antibiotics, quarantine, additional_testing]
+    loss_matrix:
+      - [0, 8, 8, 6]
+      - [10, 0, 7, 3]
+      - [10, 7, 0, 2]
+      - [9, 6, 6, 0]
+    severe_labels: [1, 2, 3]
+    harmful_actions: [0]
+    coverage_target: 0.95
+  eyepacs_to_aptos:
+    output_dir: outputs/eyepacs_to_aptos
+    calibration_split: target_calibration
+    test_split: target_test
+    num_labels: 5
+    actions: [routine_rescreen, shortened_rescreen, ophthalmology_referral, urgent_retina_referral]
+    loss_matrix:
+      - [0, 1, 3, 6]
+      - [1, 0, 2, 5]
+      - [4, 2, 0, 3]
+      - [8, 5, 2, 0]
+      - [10, 6, 3, 0]
+    severe_labels: [3, 4]
+    harmful_actions: [0]
+    coverage_target: 0.95

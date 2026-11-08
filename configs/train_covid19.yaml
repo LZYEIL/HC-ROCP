@@ -1,0 +1,20 @@
+# ConvNeXt V2-Tiny training and probability export.
+experiment: covid19
+seed: 20260816
+manifest: outputs/covid19/manifest.csv
+output_dir: outputs/covid19
+checkpoint_dir: checkpoints/covid19
+pretrained_checkpoint: checkpoints/convnextv2_tiny_22k_224_ema.pt
+num_classes: 4
+image_size: 224
+train_split: train
+validation_split: validation
+export_splits: [validation, calibration, test]
+batch_size: 64
+num_workers: 8
+epochs: 12
+early_stopping_patience: 4
+learning_rate: 0.0003
+weight_decay: 0.05
+label_smoothing: 0.1
+drop_path_rate: 0.1

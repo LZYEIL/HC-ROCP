@@ -1,0 +1,20 @@
+# ConvNeXt V2-Tiny training and probability export.
+experiment: isic2019
+seed: 20260816
+manifest: outputs/isic2019/manifest.csv
+output_dir: outputs/isic2019
+checkpoint_dir: checkpoints/isic2019
+pretrained_checkpoint: checkpoints/convnextv2_tiny_22k_224_ema.pt
+num_classes: 8
+image_size: 224
+train_split: train
+validation_split: validation
+export_splits: [validation, calibration, official_test_known, official_test_unknown]
+batch_size: 64
+num_workers: 8
+epochs: 12
+early_stopping_patience: 4
+learning_rate: 0.0003
+weight_decay: 0.05
+label_smoothing: 0.1
+drop_path_rate: 0.1

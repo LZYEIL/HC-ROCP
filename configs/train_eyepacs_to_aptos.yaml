@@ -1,0 +1,27 @@
+# ConvNeXt V2-Tiny training and probability export.
+experiment: eyepacs_to_aptos
+seed: 20260816
+manifest: outputs/eyepacs_to_aptos/manifest.csv
+output_dir: outputs/eyepacs_to_aptos
+checkpoint_dir: checkpoints/eyepacs_to_aptos
+pretrained_checkpoint: checkpoints/convnextv2_tiny_22k_224_ema.pt
+num_classes: 5
+image_size: 224
+train_split: source_train
+validation_split: source_validation
+export_splits: [source_validation, target_calibration, target_validation, target_test]
+batch_size: 64
+num_workers: 16
+epochs: 15
+early_stopping_patience: 5
+learning_rate: 0.00001
+backbone_learning_rate: 0.00001
+head_learning_rate: 0.0001
+head_only_epochs: 2
+precision: fp32
+gradient_clip_norm: 1.0
+weight_decay: 0.05
+label_smoothing: 0.1
+drop_path_rate: 0.1
+balanced_sampler: true
+disable_class_weights: true
