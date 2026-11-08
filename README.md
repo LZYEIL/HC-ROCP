@@ -81,16 +81,3 @@ GPU training requires a compatible NVIDIA driver. Use the bundled probabilities
 for numerical comparison with the paper; re-exporting can introduce floating-point
 differences. Export also replaces the tracked probability files at its output paths.
 See [output handling](outputs/README.md) before running new classifier experiments.
-
-## Citation
-
-If you use this code in your research, please cite:
-
-```bibtex
-@inproceedings{li2026hcrocp,
-  title     = {Certify, Report, or Refuse: Harm-Constrained Conformal Prediction for Clinical Actions},
-  author    = {Li, Zhiyuan and Yu, Lequan},
-  booktitle = {Machine Learning for Health (ML4H), Findings},
-  year      = {2026}
-}
-```
