@@ -1,6 +1,6 @@
 # Experiment outputs
 
-This folder includes the nine frozen input files needed for the paper's wrapper
+This folder includes the nine frozen input files needed for the paper's HC-ROCP
 evaluations (about 8.5 MB). No images or weights are needed for those evaluations.
 Scripts also write their results here; generated files are ignored by Git except
 the nine input paths listed below.
@@ -33,7 +33,7 @@ Bundled inputs:
 | `eyepacs_to_aptos/` | `manifest.csv`, `probabilities_target_calibration.npz`, `probabilities_target_test.npz` |
 
 Each probability file contains `probabilities`, `labels`, and `sample_ids`.
-Validation and unknown-class exports are not required for the paper's wrapper experiments.
+Validation and unknown-class exports are not required for the paper's HC-ROCP experiments.
 These dataset-derived files remain subject to the original dataset terms.
 Training/export can replace the tracked manifests or probabilities; use a
 separate output root for new classifier runs to preserve the reference inputs.

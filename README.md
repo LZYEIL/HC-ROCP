@@ -7,7 +7,7 @@ for Clinical Actions**.
 
 The frozen classifier probabilities and split manifests are included.
 No images, model weights, or separate baseline repositories are needed to run
-the wrapper evaluations.
+the HC-ROCP evaluations.
 
 ```bash
 git clone https://github.com/LZYEIL/HC-ROCP.git

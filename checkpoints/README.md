@@ -57,7 +57,7 @@ inference weights or a custom YAML for training paths.
 ## Frozen probabilities
 
 Matching frozen probability arrays and split manifests are already bundled in
-`outputs/<dataset>/`. Wrapper experiments need no weight download or image-model
+`outputs/<dataset>/`. HC-ROCP experiments need no weight download or image-model
 inference. See [the input file list](../outputs/README.md).
 
 Download only trusted weight files: the exporter loads PyTorch checkpoint dictionaries.
